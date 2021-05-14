@@ -17,19 +17,19 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Из Москвы</a>
+            <a class="nav-link" href="{% url 'departure' 'dep1' %}">РР· РњРѕСЃРєРІС‹</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Из Петербурга</a>
+            <a class="nav-link" href="{% url 'departure' 'dep2' %}">РР· РџРµС‚РµСЂР±СѓСЂРіР°</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Из Новосибирска</a>
+            <a class="nav-link" href="{% url 'departure' 'dep3' %}">РР· РќРѕРІРѕСЃРёР±РёСЂСЃРєР°</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Из Екатеринбурга</a>
+            <a class="nav-link" href="{% url 'departure' 'dep4' %}">РР· Р•РєР°С‚РµСЂРёРЅР±СѓСЂРіР°</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Из Казани</a>
+            <a class="nav-link" href="{% url 'departure' 'dep5' %}">РР· РљР°Р·Р°РЅРё</a>
           </li>
         </ul>
       </div>
@@ -38,9 +38,9 @@
   <main class="container mt-3">
     <!-- HERO -->
     <section class="jumbotron text-center mt-4" style="background: url('https://place-hold.it/1600x300'); background-position: center center">
-      <h1 class="display-4">Всякие туры</h1>
-      <p class="lead">Для тех, кого отвлекают дома</p>
-      <p class="mt-5 w-50 mx-auto">Лучшие направления,где никто не будет вам мешать сидеть на берегу и изучать программирование, дизайн, разработку игр и управление продуктами</p>
+      <h1 class="display-4">Р’СЃСЏРєРёРµ С‚СѓСЂС‹</h1>
+      <p class="lead">Р”Р»СЏ С‚РµС…, РєРѕРіРѕ РѕС‚РІР»РµРєР°СЋС‚ РґРѕРјР°</p>
+      <p class="mt-5 w-50 mx-auto">Р›СѓС‡С€РёРµ РЅР°РїСЂР°РІР»РµРЅРёСЏ,РіРґРµ РЅРёРєС‚Рѕ РЅРµ Р±СѓРґРµС‚ РІР°Рј РјРµС€Р°С‚СЊ СЃРёРґРµС‚СЊ РЅР° Р±РµСЂРµРіСѓ Рё РёР·СѓС‡Р°С‚СЊ РїСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ, РґРёР·Р°Р№РЅ, СЂР°Р·СЂР°Р±РѕС‚РєСѓ РёРіСЂ Рё СѓРїСЂР°РІР»РµРЅРёРµ РїСЂРѕРґСѓРєС‚Р°РјРё</p>
     </section>
     <!-- CARDS -->
     <div class="row mt-5">
@@ -48,11 +48,11 @@
         <div class="card mb-4">
           <div class="embed-responsive embed-responsive-16by9">
              <img class="card-img-top embed-responsive-item" src="https://place-hold.it/300x200" alt="" />
-          </div>          
+          </div>
           <div class="card-body">
             <h2 class="h5 card-title">Hotel title</h2>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-sm btn-primary">Подробнее</a>
+            <a href="{% url 'tour' 1 %}" class="btn btn-sm btn-primary">РџРѕРґСЂРѕР±РЅРµРµ</a>
           </div>
         </div>
       </div>
@@ -60,11 +60,11 @@
         <div class="card mb-4">
           <div class="embed-responsive embed-responsive-16by9">
              <img class="card-img-top embed-responsive-item" src="https://place-hold.it/300x200" alt="" />
-          </div>          
+          </div>
           <div class="card-body">
             <h2 class="h5 card-title">Hotel title</h2>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-sm btn-primary">Подробнее</a>
+            <a href="{% url 'tour' 2 %}" class="btn btn-sm btn-primary">РџРѕРґСЂРѕР±РЅРµРµ</a>
           </div>
         </div>
       </div>
@@ -72,11 +72,11 @@
         <div class="card mb-4">
           <div class="embed-responsive embed-responsive-16by9">
              <img class="card-img-top embed-responsive-item" src="https://place-hold.it/300x200" alt="" />
-          </div>          
+          </div>
           <div class="card-body">
             <h2 class="h5 card-title">Hotel title</h2>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-sm btn-primary">Подробнее</a>
+            <a href="{% url 'tour' 3 %}" class="btn btn-sm btn-primary">РџРѕРґСЂРѕР±РЅРµРµ</a>
           </div>
         </div>
       </div>
@@ -84,11 +84,11 @@
         <div class="card mb-4">
           <div class="embed-responsive embed-responsive-16by9">
              <img class="card-img-top embed-responsive-item" src="https://place-hold.it/300x200" alt="" />
-          </div>          
+          </div>
           <div class="card-body">
             <h2 class="h5 card-title">Hotel title</h2>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-sm btn-primary">Подробнее</a>
+            <a href="{% url 'tour' 4 %}" class="btn btn-sm btn-primary">РџРѕРґСЂРѕР±РЅРµРµ</a>
           </div>
         </div>
       </div>
@@ -96,11 +96,11 @@
         <div class="card mb-4">
           <div class="embed-responsive embed-responsive-16by9">
              <img class="card-img-top embed-responsive-item" src="https://place-hold.it/300x200" alt="" />
-          </div>          
+          </div>
           <div class="card-body">
             <h2 class="h5 card-title">Hotel title</h2>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-sm btn-primary">Подробнее</a>
+            <a href="{% url 'tour' 5 %}" class="btn btn-sm btn-primary">РџРѕРґСЂРѕР±РЅРµРµ</a>
           </div>
         </div>
       </div>
@@ -108,11 +108,11 @@
         <div class="card mb-4">
           <div class="embed-responsive embed-responsive-16by9">
              <img class="card-img-top embed-responsive-item" src="https://place-hold.it/300x200" alt="" />
-          </div>          
+          </div>
           <div class="card-body">
             <h2 class="h5 card-title">Hotel title</h2>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-sm btn-primary">Подробнее</a>
+            <a href="{% url 'tour' 6 %}" class="btn btn-sm btn-primary">РџРѕРґСЂРѕР±РЅРµРµ</a>
           </div>
         </div>
       </div>
