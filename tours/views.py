@@ -1,23 +1,8 @@
 from django.shortcuts import render
+from tours.data import title, subtitle, description, departures, tours
 
-tours = {
-    1: 'Snowy Maple Resort ★★★★',
-    2: 'Snowy Maple Resort ★★★★',
-    3: 'Snowy Maple Resort ★★★★',
-    4: 'Snowy Maple Resort ★★★★',
-    5: 'Snowy Maple Resort ★★★★',
-    6: 'Snowy Maple Resort ★★★★',
-}
-
-departures = {
-    'dep1': 'Летим из Москвы',
-    'dep2': 'Летим из Петербурга',
-    'dep3': 'Летим из Новосибирска',
-    'dep4': 'Летим из Екатеринбурга',
-    'dep5': 'Летим из Казани',
-}
 def main_view(request):
-    return render(request, 'tours/index.html')
+    return render(request, 'tours/index.html', context={'title': title, 'subtitle': subtitle, 'description': description})
 
 def departure_view(request, departure_id):
     departure = departures[departure_id]
