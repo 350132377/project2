@@ -15,21 +15,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          {% for link in links %}
+          {% for key,value in departures.items %}
           <li class="nav-item active">
-            <a class="nav-link" href="{% departure/{{ link. }}/ %}">{{ link.departure }}</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'departure' 'dep2' %}">Из Петербурга</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'departure' 'dep3' %}">Из Новосибирска</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'departure' 'dep4' %}">Из Екатеринбурга</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'departure' 'dep5' %}">Из Казани</a>
+            <a class="nav-link" href="departure/{{ key }}/">{{ value }}</a>
           </li>
           {% endfor %}
         </ul>

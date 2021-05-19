@@ -2,11 +2,10 @@ from django.shortcuts import render
 from tours.data import title, subtitle, description, departures, tours
 
 def main_view(request):
-    return render(request, 'tours/index.html', context={'title': title, 'subtitle': subtitle, 'description': description})
+    return render(request, 'tours/index.html', context={'title': title, 'subtitle': subtitle, 'description': description, 'departures': departures})
 
-def departure_view(request, departure_id):
-    departure = departures[departure_id]
-    return render(request, 'tours/departure.html', context={'departure': departure})
+def departure_view(request):
+    return render(request, 'tours/departure.html')
 
 def tour_view(request, tour_id):
     tour = tours[tour_id]
