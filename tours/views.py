@@ -1,12 +1,19 @@
+import random
+
 from django.shortcuts import render
 from tours.data import title, subtitle, description, departures, tours
+from random import randint, random
+
+t = []
+for key,val in tours.items():
+    t.append(val)
 
 def main_view(request):
-    return render(request, 'tours/index.html', context={'title': title, 'subtitle': subtitle, 'description': description, 'departures': departures, 'tours': tours})
+    return render(request, 'tours/index.html')
 
 def departure_view(request, departure_id):
     departure = departures[departure_id]
-    return render(request, 'tours/departure.html', context={'departures': departures})
+    return render(request, 'tours/departure.html', context={'departure': departure})
 
 def tour_view(request, tour_id):
     tour = tours[tour_id]
