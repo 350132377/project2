@@ -12,7 +12,7 @@
           <img src="{{ val.picture }}" class="card-img-top img-fluid" alt="">
           <div class="card-body">
             <h2 class="h5 card-title">{{ val.title }}</h2>
-            <p class="card-text">{{ val.description }}</p>
+            <p class="card-text">{{ val.description|truncatewords:15 }}</p>
             <a href="{% url 'tour' key %}" class="btn btn-sm btn-primary">Подробнее</a>
           </div>
         </div>

@@ -5,14 +5,16 @@ import random
 def main_view(request):
     key, val = [], []
     for k, v in tours.items():
+        key.append(k)
         val.append(v)
-    return render(request, 'tours/index.html', context={'key': k, 'tours': random.sample(val, 6)})
+    return render(request, 'tours/index.html', context={'tours': random.sample(val, 6)})
 
 def departure_view(request, departure_id):
     departure = departures[departure_id]
-    departure1, result = departure_id, []
+    departure1, result, key = departure_id, [], []
     for k, tour in tours.items():
         if tour['departure'] == departure1:
+            key.append(k)
             result.append(tour)
     return render(request, 'tours/departure.html', context={'key': k, 'tours': result, 'departure': departure})
 
