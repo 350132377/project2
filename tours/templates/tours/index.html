@@ -10,7 +10,25 @@
       <p class="mt-5 w-50 mx-auto">{{ description }}</p>
     </section>
 
+    <div class="row mt-5">
+      {% for val in tours %}
+      <div class="col-4">
+        <div class="card mb-4">
+          <div class="embed-responsive embed-responsive-16by9">
+             <img class="card-img-top embed-responsive-item" src="{{ val.picture }}" alt="" />
+          </div>
+          <div class="card-body">
+            <h2 class="h5 card-title">{{ val.country }}: {{ val.title }}</h2>
+            <p class="card-text">{{ val.description }}</p>
+            <p class="card-text">{{ val.date }}, {{ val.nights }} дней, {{ val.price }} Р {{ val.stars }}★</p>
+            <a href="tour/{{ key }}/" class="btn btn-sm btn-primary">Подробнее</a>
+          </div>
+        </div>
+      </div>{% endfor %}
+    </div>
 {% endblock %}
+
+
 
 
 

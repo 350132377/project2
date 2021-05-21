@@ -3,17 +3,18 @@ from tours.data import departures, tours
 import random
 
 def main_view(request):
-    val = []
-    for key, vl in tours.items():
-        val.append(vl)
-    return render(request, 'tours/index.html', context={'tours': random.sample(val, 6)})
+    key, val = [], []
+    for k, v in tours.items():
+        val.append(v)
+    return render(request, 'tours/index.html', context={'key': k, 'tours': random.sample(val, 6)})
 
 def departure_view(request, departure_id):
     departure = departures[departure_id]
-    val = []
-    for key, vl in tours.items():
-        val.append(vl)
-    return render(request, 'tours/departure.html', context={'departure': departure, 'tours': random.sample(val, 6)})
+    departure1, result = departure_id, []
+    for k, tour in tours.items():
+        if tour['departure'] == departure1:
+            result.append(tour)
+    return render(request, 'tours/departure.html', context={'key': k, 'tours': result, 'departure': departure})
 
 def tour_view(request, tour_id):
     tour = tours[tour_id]
