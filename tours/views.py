@@ -1,22 +1,21 @@
 from django.shortcuts import render
+
 from tours.data import departures, tours
-import random
+
+from random import sample
 
 def main_view(request):
-    key, val = [], []
-    for k, v in tours.items():
-        key.append(k)
-        val.append(v)
-    return render(request, 'tours/index.html', context={'tours': random.sample(val, 6)})
+    return render(request, 'tours/index.html', context={'tours': dict(sample(tours.items(), 6))})
 
 def departure_view(request, departure_id):
     departure = departures[departure_id]
-    departure1, result, key = departure_id, [], []
+    departure1, result, keys = departure_id, [], []
     for k, tour in tours.items():
         if tour['departure'] == departure1:
-            key.append(k)
+            keys.append(k)
             result.append(tour)
-    return render(request, 'tours/departure.html', context={'key': k, 'tours': result, 'departure': departure})
+    zipped = zip(keys, result)
+    return render(request, 'tours/departure.html', context={'tours': zipped, 'departure': departure})
 
 def tour_view(request, tour_id):
     tour = tours[tour_id]

@@ -6,7 +6,7 @@
     <h1 class="display-5 mt-4">Летим {{ departure }}</h1>
     <p class="mb-4">Найдено 15 туров, от 26 000 до 84 600 и от 4 ночей до 15 ночей</p>
     <div class="row mt-5">
-      {% for val in tours %}
+      {% for key,val in tours %}
       <div class="col-4">
         <div class="card mb-4">
           <img src="{{ val.picture }}" class="card-img-top img-fluid" alt="">

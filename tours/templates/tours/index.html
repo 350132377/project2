@@ -11,7 +11,7 @@
     </section>
 
     <div class="row mt-5">
-      {% for val in tours %}
+      {% for key,val in tours.items %}
       <div class="col-4">
         <div class="card mb-4">
           <div class="embed-responsive embed-responsive-16by9">
@@ -21,7 +21,7 @@
             <h2 class="h5 card-title">{{ val.country }}: {{ val.title }}</h2>
             <p class="card-text">{{ val.description|truncatewords:18 }}</p>
             <p class="card-text">{{ val.date }}, {{ val.nights }} дней, {{ val.price }} Р {{ val.stars }}★</p>
-            <a href="tour/{{ key }}/" class="btn btn-sm btn-primary">Подробнее</a>
+            <a href="{% url 'tour' key %}" class="btn btn-sm btn-primary">Подробнее</a>
           </div>
         </div>
       </div>{% endfor %}
